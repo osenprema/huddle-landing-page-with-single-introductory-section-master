@@ -17,77 +17,77 @@ html {
 /* 360 x 640 (small mobile) */
 body {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   background: url("./assets/images/bg-mobile.svg") no-repeat;
   background-color: rgba(103, 75, 175, 0.9);
-  background-size: cover; }
+  display: flex;
+  flex-direction: column; }
 
 main {
-  width: 80vw;
+  width: 75vw;
   height: 90vh;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  margin: auto; }
-  main section {
-    width: 100%;
-    height: 50%; }
-
-.main__images img {
-  width: 100%; }
-
-.main__text {
-  color: white;
-  text-align: center; }
-  .main__text h1 {
-    font-family: "Poppins";
-    font-size: 1.4rem;
-    line-height: 1.3; }
-  .main__text p {
-    font-family: "Open Sans";
-    font-size: 0.9rem;
-    font-weight: 300;
-    margin-top: 2.5vh; }
-  .main__text button {
-    width: 50vw;
-    border-radius: 30px;
-    height: 5vh;
-    font-size: 0.7rem;
-    margin-top: 4vh;
-    color: rgba(103, 75, 175, 0.9);
-    border: none;
-    outline: none;
-    cursor: pointer; }
-  .main__text button:hover {
+  flex-direction: column; }
+  main .main__header img {
+    width: 33vw; }
+  main .main__body {
+    display: flex;
+    flex-direction: column;
+    margin: auto; }
+    main .main__body div {
+      width: 100%;
+      height: 50%; }
+  main .main__body__image img {
+    width: 100%; }
+  main .main__body__text {
     color: white;
-    background-color: #e882e8; }
-
-.logo {
-  width: 33vw;
-  margin: 4vh 0 5vh 10vw; }
-
-.social__medias {
-  display: flex;
-  gap: 3vw;
-  justify-content: center;
-  margin-bottom: 3vh; }
-  .social__medias a {
-    text-decoration: none; }
-    .social__medias a span {
+    text-align: center; }
+    main .main__body__text h1 {
+      margin-top: 1vh;
+      font-family: "Poppins";
+      font-size: 1.4rem;
+      line-height: 1.3; }
+    main .main__body__text p {
+      font-family: "Open Sans";
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.5;
+      margin-top: 2.5vh; }
+    main .main__body__text button {
+      width: 50vw;
+      border-radius: 30px;
+      height: 4.5vh;
       font-size: 0.7rem;
+      margin-top: 3vh;
+      color: rgba(103, 75, 175, 0.9);
+      border: none;
+      outline: none;
+      cursor: pointer; }
+    main .main__body__text button:hover {
       color: white;
-      padding: 0.4rem;
-      border-radius: 50%;
-      border: 1px solid white; }
-    .social__medias a span:hover {
-      color: #e882e8;
-      border-color: #e882e8; }
+      background-color: #e882e8; }
+  main .social__medias {
+    margin-top: 5vh;
+    display: flex;
+    gap: 3vw;
+    justify-content: center; }
+    main .social__medias a {
+      text-decoration: none; }
+      main .social__medias a span {
+        font-size: 0.7rem;
+        color: white;
+        padding: 0.5em;
+        border-radius: 50%;
+        border: 1px solid white; }
+      main .social__medias a span:hover {
+        color: #e882e8;
+        border-color: #e882e8; }
 
 .attribution {
   font-size: 16px;
   color: white;
   text-align: center;
-  margin-bottom: 1vh;
+  margin-bottom: 1.5vh;
   display: none; }
 
 .attribution a {
@@ -97,150 +97,145 @@ main {
 
 /* 720 x 1280 (large mobile) */
 @media screen and (min-width: 720px) {
-  .main__text h1 {
-    font-size: 2.8rem; }
-  .main__text p {
-    font-size: 1.6rem; }
-  .main__text button {
-    font-size: 1.5rem; }
+  body {
+    background-size: contain; }
 
-  .social__medias a span {
+  main .main__body__text h1 {
+    margin-top: 2.5vh;
+    font-size: 2.6rem; }
+  main .main__body__text p {
+    font-size: 1.6rem; }
+  main .main__body__text button {
     font-size: 1.5rem;
-    padding: 0.7rem; }
+    margin-top: 5vh; }
+  main .social__medias {
+    margin-top: 1vh; }
+    main .social__medias a span {
+      font-size: 1.5rem; }
 
   .attribution {
     display: block; } }
 /* Mobiles in landscape position  */
 @media screen and (orientation: landscape) and (max-width: 667px) {
+  body {
+    background-size: cover; }
+
   main {
-    width: 85vw;
-    height: 50vh;
-    flex-direction: row; }
-    main section {
-      width: 50%; }
-
-  .main__text {
-    padding: 4vh 1vw 4vh 3vw;
-    text-align: left; }
-    .main__text h1 {
-      font-size: 1rem; }
-    .main__text p {
-      font-size: 0.6rem; }
-    .main__text button {
+    width: 90vw;
+    height: 85vh; }
+    main .main__header img {
       width: 15vw; }
-
-  .logo {
-    width: 15vw;
-    margin: 7vh 0 0 7vw; }
-
-  .social__medias {
-    justify-content: end;
-    margin: 0 8vw 8vh 0; } }
+    main .main__body {
+      flex-direction: row; }
+      main .main__body div {
+        width: 50%;
+        height: 100%; }
+    main .main__body__text {
+      text-align: left;
+      padding: 4vh 0 0 4vw; }
+      main .main__body__text h1 {
+        font-size: 1.2rem; }
+      main .main__body__text p {
+        font-size: 0.7rem; }
+      main .main__body__text button {
+        width: 18vw;
+        height: 6vh; }
+    main .social__medias {
+      gap: 2vw;
+      justify-content: end; } }
 @media screen and (orientation: landscape) and (min-width: 767px) and (max-width: 1280px) {
   body {
     background: url("./assets/images/bg-desktop.svg") no-repeat;
-    background-size: cover;
+    background-color: rgba(103, 75, 175, 0.9);
+    background-size: cover; }
+
+  main {
+    width: 90vw;
+    height: 85vh; }
+    main .main__header img {
+      width: 15vw; }
+    main .main__body {
+      flex-direction: row; }
+      main .main__body div {
+        width: 50%;
+        height: 100%; }
+    main .main__body__text {
+      text-align: left;
+      padding: 2vh 0 0 4vw; }
+      main .main__body__text h1 {
+        font-size: 2rem; }
+      main .main__body__text p {
+        font-size: 1.2rem; }
+      main .main__body__text button {
+        width: 18vw;
+        height: 6vh;
+        font-size: 1.1rem; }
+    main .social__medias {
+      gap: 2vw;
+      justify-content: end; } }
+/* 1366 × 768 (medium laptop) */
+@media screen and (min-width: 1366px) {
+  body {
+    background: url("./assets/images/bg-desktop.svg") no-repeat;
     background-color: rgba(103, 75, 175, 0.9); }
 
   main {
     width: 85vw;
-    height: 50vh;
-    flex-direction: row; }
-    main section {
-      width: 50%; }
-
-  .main__text {
-    padding: 4vh 3vw;
-    text-align: left; }
-    .main__text h1 {
-      font-size: 1.9rem; }
-    .main__text p {
-      font-size: 1.1rem; }
-    .main__text button {
-      font-size: 1rem;
+    height: 80vh; }
+    main .main__header img {
       width: 15vw; }
-
-  .logo {
-    width: 15vw;
-    margin-left: 7vw; }
-
-  .social__medias {
-    gap: 1vw;
-    justify-content: end;
-    margin: 0 8vw 8vh 0; } }
-/* 1366 × 768 (medium laptop) */
-@media screen and (min-width: 1366px) {
-  main {
-    width: 90vw;
-    height: 60vh;
-    flex-direction: row; }
-    main section {
-      width: 50%; }
-
-  .main__text {
-    padding: 4vh 4vw;
-    text-align: left; }
-    .main__text h1 {
-      font-size: 2.3rem; }
-    .main__text p {
-      font-size: 1.1rem; }
-    .main__text button {
-      width: 14vw;
-      font-size: 1rem; }
-
-  .logo {
-    width: 15vw;
-    margin-left: 5vw; }
-
-  .social__medias {
-    gap: 1vw;
-    justify-content: end;
-    margin-right: 8vw; } }
+    main .main__body {
+      flex-direction: row; }
+      main .main__body div {
+        width: 50%;
+        height: 100%; }
+    main .main__body__text {
+      text-align: left;
+      padding: 1.5vh 0 0 4vw; }
+      main .main__body__text h1 {
+        font-size: 2.5rem; }
+      main .main__body__text p {
+        font-size: 1.2rem; }
+      main .main__body__text button {
+        width: 15vw;
+        height: 6vh;
+        font-size: 1.1rem;
+        margin-top: 3vh; }
+    main .social__medias {
+      margin-top: 1vh;
+      gap: 1vw;
+      justify-content: end; }
+      main .social__medias a span {
+        font-size: 1.2rem; } }
 /* 1440 × 900 (medium desktop) */
 @media screen and (min-width: 1440px) {
-  main {
-    width: 85vw;
-    height: 55vh; }
-    main section {
-      width: 50%; }
+  body {
+    background-size: cover; }
 
-  .main__text p {
-    font-size: 1.3rem; }
-  .main__text button {
-    width: 16vw;
-    font-size: 1.1rem; }
-
-  .logo {
-    width: 15vw;
-    margin-left: 8vw; } }
+  main .social__medias a span {
+    font-size: 1.4rem; } }
 /* 1920 × 1080 (large desktop) */
 @media screen and (min-width: 1920px) {
-  .main__text {
-    padding-top: 5vh; }
-    .main__text h1 {
-      font-size: 3rem; }
-    .main__text p {
-      font-size: 1.5rem; }
-    .main__text button {
-      width: 15vw;
-      font-size: 1.5rem; }
-
-  .social__medias {
-    margin-right: 10vw; } }
+  main .main__body__text h1 {
+    font-size: 3rem; }
+  main .main__body__text p {
+    font-size: 1.5rem; }
+  main .main__body__text button {
+    font-size: 1.4rem; }
+  main .social__medias a span {
+    font-size: 1.5rem; } }
 /* Desktops in portrait position  */
 @media screen and (orientation: portrait) and (min-width: 1080px) {
-  .main__text h1 {
-    font-size: 3.5rem; }
-  .main__text p {
+  main .main__body__text h1 {
+    font-size: 4rem; }
+  main .main__body__text p {
     font-size: 2.5rem; }
-  .main__text button {
-    width: 50vw;
+  main .main__body__text button {
     font-size: 2.5rem; }
+  main .social__medias a span {
+    font-size: 2.4rem; }
 
-  .social__medias {
-    gap: 4vw; }
-    .social__medias a span {
-      font-size: 3rem;
-      padding: 1rem; } }
+  .attribution {
+    font-size: 25px; } }
 
 /*# sourceMappingURL=styles.css.map */
